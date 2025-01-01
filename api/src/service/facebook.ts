@@ -6,6 +6,9 @@ const accessToken = process.env.accessToken;
 const apiVersion = "v16.0";
 
 
+
+
+
 async function postText(message: string) {
     try {
         const response = await axios.post(
@@ -20,6 +23,9 @@ async function postText(message: string) {
         console.error("Error posting text:", error);
     }
 }
+
+
+
 
 
 async function uploadPhoto(photoUrl: string, caption: string) {
@@ -37,6 +43,9 @@ async function uploadPhoto(photoUrl: string, caption: string) {
         console.error("Error uploading photo:", error);
     }
 }
+
+
+
 
 
 async function uploadVideo(videoUrl: string, description: string) {

@@ -78,16 +78,3 @@ async function postTextImageVideo(text: string, imageUrl: string, videoUrl: stri
     }
 }
 
-
-(async () => {
-    try {
-      
-        const text = "Check out this combined post with text, image, and video!";
-        const imageUrl = "https://example.com/my-image.jpg";
-        const videoUrl = "https://example.com/my-video.mp4"; 
-        
-        await postTextImageVideo(text, imageUrl, videoUrl);
-    } catch (error) {
-        console.error("Error posting to LinkedIn:", error);
-    }
-})();

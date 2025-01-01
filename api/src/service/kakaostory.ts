@@ -67,11 +67,6 @@ async function postPhotoToKakaoStory(photoUrls: string[], content: string) {
                 content: content,
                 image_url_list: uploadedPhotoUrls,
             },
-            {
-                headers: {
-                    Authorization: `Bearer ${kakaoAccessToken}`,
-                },
-            }
         );
 
         console.log("Photo posted successfully to KakaoStory:", response.data);
@@ -98,11 +93,6 @@ async function postLinkToKakaoStory(linkUrl: string, content: string) {
                     url: linkUrl,
                 },
                 content: content,
-            },
-            {
-                headers: {
-                    Authorization: `Bearer ${kakaoAccessToken}`,
-                },
             }
         );
 
@@ -116,19 +106,3 @@ async function postLinkToKakaoStory(linkUrl: string, content: string) {
     }
 }
 
-// Example Usage
-(async () => {
-    try {
-        // Post a text note
-        await postTextToKakaoStory("Hello KakaoStory! This is a simple text post.");
-
-        // Post a photo
-        const photoUrls = ["https://example.com/photo1.jpg", "https://example.com/photo2.jpg"];
-        await postPhotoToKakaoStory(photoUrls, "Check out these amazing photos!");
-
-        // Post a link
-        await postLinkToKakaoStory("https://example.com", "Visit this amazing website!");
-    } catch (error) {
-        console.error("Error executing KakaoStory functions:", error);
-    }
-})();
