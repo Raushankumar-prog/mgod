@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,14 +20,36 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <nav className="w-full flex justify-between items-center px-6 py-4 bg-white shadow-lg rounded-lg max-w-5xl mx-auto mt-4">
+          <Link href="/">
+            <div className="text-3xl font-extrabold text-blue-700 flex items-center gap-2">
+              🚀 Mgod
+            </div>
+          </Link>
+          <div className="flex space-x-6">
+            <Link href="/Reach" className="text-sm text-blue-700 font-semibold cursor-pointer hover:underline transition-colors duration-300">
+              Reach
+            </Link>
+            <Link href="/ISMP" className="text-sm text-blue-700 font-semibold cursor-pointer hover:underline transition-colors duration-300">
+              ISMP
+            </Link>
+            <Link href="/Campaigns" className="text-sm text-blue-700 font-semibold cursor-pointer hover:underline transition-colors duration-300">
+              Campaigns
+            </Link>
+            <Link href="/Pricing" className="text-sm text-blue-700 font-semibold cursor-pointer hover:underline transition-colors duration-300">
+              Pricing
+            </Link>
+            <Link href="/sign_up" className="text-sm text-blue-700 font-semibold cursor-pointer hover:underline transition-colors duration-300">
+              Signup
+            </Link>
+          </div>
+        </nav>
         {children}
       </body>
     </html>
