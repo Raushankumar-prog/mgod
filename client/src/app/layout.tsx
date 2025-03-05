@@ -39,8 +39,8 @@ export default function RootLayout({
             <Link href="/ISMP" className="text-sm text-blue-700 font-semibold cursor-pointer hover:underline transition-colors duration-300">
               ISMP
             </Link>
-            <Link href="/Campaigns" className="text-sm text-blue-700 font-semibold cursor-pointer hover:underline transition-colors duration-300">
-              Campaigns
+            <Link href="/Content" className="text-sm text-blue-700 font-semibold cursor-pointer hover:underline transition-colors duration-300">
+              Content
             </Link>
             <Link href="/Pricing" className="text-sm text-blue-700 font-semibold cursor-pointer hover:underline transition-colors duration-300">
               Pricing
