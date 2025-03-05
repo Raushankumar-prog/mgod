@@ -1,35 +1,24 @@
 import Image from 'next/image';
+import img2 from "@/components/assest/2.png";
 
 const ISMP = () => {
     return ( 
         <div>
-              <section className="max-w-6xl mx-auto py-12 text-center">
-                    <h2 className="text-3xl font-semibold text-center mb-8 neon-text">
-                      Integrated Social Media Platforms
-                    </h2>
-                    <div className="flex flex-wrap justify-center gap-10">
-                      {/* Example Logos - Replace with actual logos and paths */}
-                      <div className="w-20 h-20 relative">
-                        <Image src="/facebook-logo.svg" alt="Facebook" fill sizes="100%"  />
-                      </div>
-                      <div className="w-20 h-20 relative">
-                        <Image src="/instagram-logo.svg" alt="Instagram" fill sizes="100%" />
-                      </div>
-                      <div className="w-20 h-20 relative">
-                        <Image src="/twitter-logo.svg" alt="Twitter" fill sizes="100%" />
-                      </div>
-                      <div className="w-20 h-20 relative">
-                        <Image src="/linkedin-logo.svg" alt="LinkedIn" fill sizes="100%" />
-                      </div>
-                      <div className="w-20 h-20 relative">
-                        <Image src="/youtube-logo.svg" alt="YouTube" fill sizes="100%" />
-                      </div>
-                      <div className="w-20 h-20 relative">
-                        <Image src="/tiktok-logo.svg" alt="TikTok" fill sizes="100%" />
-                      </div>
-                      {/* Add more logos here */}
-                    </div>
-                  </section>
+              <div className="flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto py-16 px-6">
+        <div className="max-w-lg space-y-6">
+          <h1 className="text-3xl font-bold leading-tight">
+            Trusted Partnerships & Integrations Across Leading Platforms
+          </h1>
+          <p className="text-gray-300">
+            Our platform builds and maintains strong network partnerships and
+            integrations to help you unify your customer touchpoints and keep
+            pace with changes in the social landscape.
+          </p>
+        </div>
+        <div>
+          <Image src={img2} alt="Trusted Partnerships" width={500} height={500} className="rounded-lg shadow-lg" />
+        </div>
+      </div>
         </div>
      );
 }
