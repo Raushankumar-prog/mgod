@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <nav className="w-full flex justify-between items-center px-6 py-4 bg-white shadow-lg rounded-lg max-w-5xl mx-auto mt-4">
+        <nav className="w-full flex sticky top-0 z-50  justify-between items-center px-6 py-4 bg-white shadow-lg rounded-lg max-w-5xl mx-auto mt-4">
           <Link href="/">
             <div className="text-3xl font-extrabold text-blue-700 flex items-center gap-2">
               🚀 Mgod

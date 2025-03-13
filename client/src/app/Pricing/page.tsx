@@ -1,7 +1,10 @@
+interface PricingCardProps {
+  title: string;
+  price: string;
+  features: string[];
+}
 
-
-
-function PricingCard({ title, price, features }) {
+function PricingCard({ title, price, features }: PricingCardProps) {
   return (
     <div className="pricing-card p-8 rounded-lg bg-gray-700 shadow-xl hover:shadow-2xl transition-shadow duration-300 text-center">
       <h3 className="text-2xl font-semibold text-blue-400 mb-4">{title}</h3>
@@ -13,7 +16,9 @@ function PricingCard({ title, price, features }) {
           </li>
         ))}
       </ul>
-      <button className=" mt-4">Choose Plan</button>
+      <button className="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-md transition">
+        Choose Plan
+      </button>
     </div>
   );
 }

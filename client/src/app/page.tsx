@@ -96,8 +96,7 @@ export default function Home() {
 
 
 
-
-function FeatureCard({ title, description }) {
+function FeatureCard({ title, description }: { title: string; description: string }) {
   return (
     <div className="p-6 rounded-lg bg-gray-800 shadow-md hover:shadow-lg transition-shadow duration-300">
       <h3 className="text-xl font-semibold mb-2">{title}</h3>
